@@ -28,7 +28,7 @@
                 Visit <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
             </div>
             
-            <div class="mt-3">2025-12-11 07:48:55 UTC</div>
+            <div class="mt-3" id="visitor-time-container">Local time: <span id="visitor-time">--:--:--</span></div>
         </header>
         <div class="my-8 bg-gradient-gray">
           <div class="w-240 lg:w-full mx-auto">
@@ -103,6 +103,7 @@
         </div><!-- /.error-footer -->
     </div>
 </div>
+<script>(function(){var timeElement=document.getElementById("visitor-time");if(!timeElement)return;var label=document.getElementById("visitor-time-container");function updateTime(){var now=new Date();var formatted=now.toLocaleString([], {year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",timeZoneName:"short",hour12:false});timeElement.textContent=formatted;if(label&&!label.dataset.labelUpdated){label.dataset.labelUpdated="true"}}updateTime();setInterval(updateTime,1e3)})();</script>
 <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
 </body>
 </html>
